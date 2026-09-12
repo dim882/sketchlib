@@ -1,0 +1,31 @@
+{
+  "name": "@dim882/sketchlib",
+  "version": "0.1.0",
+  "description": "Reusable TypeScript utilities for creative-coding sketches in the Sketchbook workspace",
+  "license": "MIT",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./animation": {
+      "types": "./dist/animation.d.ts",
+      "default": "./dist/animation.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
